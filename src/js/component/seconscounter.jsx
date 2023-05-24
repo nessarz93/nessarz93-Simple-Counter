@@ -1,25 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
 
 const SecondsCounter = () => {
-    let interval;
-    const [time, setTime] = useState(0);
+ 
+    const [count, setCount] = useState(0);
 
-    console.log(time)
-
-    const handleStart = () => {
-        setTime((time) => time + 1);
-        interval = setInterval(() => {
-            setTime((time) => time + 1)
-        }, 1000);
-    }
-
-	return (
-        <div>
-            <div onLoad = {handleStart}>
-                <h1>{time}Segundos</h1>
-            </div>
-        </div>
-    );
-}
+    useEffect(() => {
+      setInterval(() => {
+        setCount(prevCount => prevCount + 1);
+      }, 1000);
+    }, []);
+  
+    return <h1>The component has been rendered for {count} seconds</h1>;
+  };
 
 export default SecondsCounter;
