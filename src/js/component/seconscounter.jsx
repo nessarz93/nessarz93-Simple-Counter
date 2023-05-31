@@ -10,8 +10,18 @@ const SecondsCounter = () => {
         setCount(prevCount => prevCount + 1);
       }, 1000);
     }, []);
+
+    function decimal () {
+      let str = count.toString();
+      let largo = str.length
+      let dif = 6 - largo;
+      
+      for (let i=1; i=>6; i++) {
+        str = "0" + str
+      }
+    }
   
-    return <h1>The component has been rendered for {count} seconds</h1>;
+    return <h1>{count} seconds</h1>;
   };
 
 export default SecondsCounter;
