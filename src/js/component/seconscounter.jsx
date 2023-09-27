@@ -3,23 +3,17 @@ import { useState } from "react";
 
 const SecondsCounter = () => {
  
-    const [count, setCount] = useState(0);
+   const [count, setCount] = useState(0);
 
-    useEffect(() => {
+  useEffect(() => {
       setInterval(() => {
-        setCount(prevCount => prevCount + 1);
-      }, 1000);
-    }, []);
+        let one = Math.floor(count/1)
 
-    function decimal () {
-      let str = count.toString();
-      let largo = str.length
-      let dif = 6 - largo;
-      
-      for (let i=1; i=>6; i++) {
-        str = "0" + str
-      }
-    }
+        setCount(prevCount => prevCount + 1)
+       // console.log(one);
+      }, 1000);
+    }, []); 
+
   
     return <h1>{count} seconds</h1>;
   };
