@@ -1,7 +1,7 @@
 
 .counter {
     font-size: 60px;
-    background-color: blue;
+    background-color: #383737;
     border-radius: 15px;
     color: white;
     padding: 20px;
@@ -10,5 +10,9 @@
 
 .reloj {
     text-align: center;
-    background-color: aqua;
+    background-color: #1F1E1E;
+}
+
+body {
+    background-color: #1F1E1E;
 }
